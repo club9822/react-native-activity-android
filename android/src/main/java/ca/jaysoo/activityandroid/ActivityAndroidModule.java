@@ -17,15 +17,15 @@ import com.facebook.react.bridge.ReactMethod;
 public class ActivityAndroidModule extends ReactContextBaseJavaModule implements LifecycleEventListener {
   private Activity mCurrentActivity;
 
-  public ActivityAndroidModule(ReactApplicationContext reactContext, Activity activity) {
+  public ActivityAndroidModule(ReactApplicationContext reactContext) {
     super(reactContext);
-    mCurrentActivity = activity;
+    mCurrentActivity = getCurrentActivity();
     reactContext.addLifecycleEventListener(this);
   }
 
   @Override
   public String getName() {
-    return "ActivityAndroid";
+    return "RNActivityAndroid";
   }
 
   @ReactMethod

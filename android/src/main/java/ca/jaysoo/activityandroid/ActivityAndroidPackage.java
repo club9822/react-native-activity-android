@@ -13,27 +13,20 @@ import java.util.Collections;
 import java.util.List;
 
 public class ActivityAndroidPackage implements ReactPackage {
-    private Activity mCurrentActivity;
-
-    public ActivityAndroidPackage(Activity activity) {
-        mCurrentActivity = activity;
-    }
-
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return Arrays.<NativeModule>asList(
-            new ActivityAndroidModule(reactContext, mCurrentActivity)
+            new ActivityAndroidModule(reactContext)
         );
     }
 
-    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Arrays.asList();
+        return Collections.emptyList();
     }
 }
 

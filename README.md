@@ -1,6 +1,3 @@
-[![](https://api.travis-ci.org/jaysoo/react-native-activity-android.svg)](https://travis-ci.org/jaysoo/react-native-activity-android) [![](https://img.shields.io/npm/dm/react-native-activity-android.svg?style=flat-square)](https://www.npmjs.com/package/react-native-activity-android)
-
-
 ## react-native-activity-android
 
 Provides a method to move Android apps to the background (instead of exiting), and lifecycle hooks when
@@ -76,7 +73,7 @@ import { BackAndroid } from 'react-native';
 import ActivityAndroid 'react-native-activity-android';
 
 BackAndroid.addEventListener('hardwareBackPress', () => {
-  // Note: callbacks are optional.
+  // Note: callbacks are optional. 
   ActivityAndroid.moveTaskToBack(() => console.log('worked'), () => console.log('failed'));
   return false; // Don't exit the app.
 });
